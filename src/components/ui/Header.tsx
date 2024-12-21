@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from '../common/Button'
 import { navigationItems } from '@/utils/common'
 import Logo from './Logo'
@@ -19,8 +18,8 @@ const Header = () => {
                 <nav className="mx-auto flex max-w-7xl items-center justify-between px-3 py-3 rounded-xl " aria-label="Global">
                     <div className="flex lg:flex-1">
                         <Link href="/" className="-m-1.5 p-1.5">
-                           
-                           <Logo/>
+
+                            <Logo />
                         </Link>
                     </div>
                     <div className="flex lg:hidden">
@@ -30,7 +29,7 @@ const Header = () => {
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>
-                            <RxHamburgerMenu  className="h-6 w-6" aria-hidden="true" />
+                            <RxHamburgerMenu className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
@@ -48,7 +47,7 @@ const Header = () => {
                         <div className="flex items-center justify-between">
                             <Link href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">LOGO</span>
-                                <Logo/>
+                                <Logo />
                             </Link>
                             <button
                                 type="button"
@@ -56,7 +55,7 @@ const Header = () => {
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <span className="sr-only">Close menu</span>
-                                <IoMdClose  className="h-6 w-6" aria-hidden="true" />
+                                <IoMdClose className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </div>
                         <div className="mt-6 flow-root">
@@ -81,10 +80,7 @@ export default Header
 
 // header navigation component
 
-interface NavigationItem {
-    href: string;
-    label: string;
-}
+
 
 interface NavigationProps {
     className?: string; // Optional className prop

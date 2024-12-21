@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
-import { IoCaretForwardOutline } from 'react-icons/io5';  // Make sure to import the icon
 
 interface ButtonProps {
   href?: string;
   className?: string;
   title?: string;
   icon?: React.ReactNode;  // Optional icon prop
-  buttonIcon?: React.ReactNode; 
+  buttonIcon?: React.ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({ href = "#", className = 'btn-primary', title = "Start free trial", icon, ...props }) => {

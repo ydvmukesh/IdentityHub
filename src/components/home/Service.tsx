@@ -4,9 +4,6 @@ import CardIcon from "../common/CardIcon";
 import { cardData } from "@/utils/data"; // Import the card data from data.ts
 import SubTitle from '../common/SubTitle';
 
-
-import { IoCaretForwardOutline } from "react-icons/io5";
-
 const Service = () => {
 
   return (
