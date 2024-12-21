@@ -4,10 +4,9 @@ import Image from 'next/image'
 
 const Logo = () => {
   return (
-    <div>
-      LOGO
-         {/* <Image src={LogoImg} alt='logo' /> */}
-    </div>
+    <>
+         <Image src={LogoImg} alt='logo' />
+    </>
   )
 }
 
