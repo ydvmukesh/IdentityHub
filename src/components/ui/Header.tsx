@@ -14,7 +14,7 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="mt-3">
+        <header className="mt-3 sticky top-0 z-50">
             <div className="container">
                 <nav className="mx-auto flex max-w-7xl items-center justify-between px-3 py-3 rounded-xl " aria-label="Global">
                     <div className="flex lg:flex-1">
