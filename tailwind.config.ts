@@ -9,8 +9,8 @@ export default {
   theme: {
     extend: {
       container: {
-        center: true, // Centers the container by adding margin auto
-        padding: '1rem', // Adds padding to the container
+        center: true, 
+        padding: '1rem', 
         screens: {
           sm: '600px',
           md: '720px',
@@ -20,20 +20,25 @@ export default {
         },
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         primary: {
-          DEFAULT: 'var(--primary)', // Default primary color (blue-600)
-      
+          DEFAULT: 'var(--primary)', // Ensure --primary is defined in your global styles
         },
         secondary: {
-          DEFAULT: 'var(--secondary)', // Default secondary color (yellow-400)
-      
+          DEFAULT: 'var(--secondary)', // Ensure --secondary is defined in your global styles
         },
-       
         slate: {
-          300: '#CAD1E9', // Override text-slate-300 color
-          900: '#0e0c15', // Override text-slate-300 color
+          300: '#CAD1E9', 
+          900: '#0e0c15',
+        },
+        blue: {
+          300: '#131369',
+          400: '#1E21E9', 
+        },
+        lime: {
+          300: '#098709',
+        },
+        violet: {
+          300: '#7950FF',
         },
       },
     },

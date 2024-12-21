@@ -10,12 +10,12 @@ interface HeadingProps {
 
 const Title: React.FC<HeadingProps> = ({ title = "Heading Here", sectionClass = "text-center",  className= "" , classDes= "" , description }) => {
   return (
-    <div className={`${sectionClass} max-w-3xl mx-auto section-head  gap-3 lg:gap-4`}>
+    <div className={`section-head md:max-w-2xl mx-auto gap-3 lg:gap-4 mb-5 md:mb-7 lg:mb-10 ${sectionClass}`}>
        <h2
-        className={`section-title   ${className}`}
+        className={`section-title ${className}`}
         dangerouslySetInnerHTML={{ __html: title }} // Render HTML content
       />
-      {description && <p className={` ${classDes}   descritpion `}>{description}</p>}
+      {description && <p className={`descritpion ${classDes}`}>{description}</p>}
       
     </div>
   );

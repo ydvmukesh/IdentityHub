@@ -6,6 +6,7 @@ import { navigationItems } from '@/utils/common'
 import Logo from './Logo'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import { IoChevronForward } from 'react-icons/io5'
 
 
 
@@ -36,7 +37,7 @@ const Header = () => {
                         <Navigation />
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <Button href='/text' title='Start free trial' />
+                    <Button href='/text' title='Start free trial' icon={<IoChevronForward />} />
                     </div>
                 </nav>
                 {/* Mobile menu, show/hide based on menu open state. */}

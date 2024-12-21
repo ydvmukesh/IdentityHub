@@ -7,7 +7,7 @@ import BannerImg from '/public/images/productivity.png';
 
 const Banner = () => {
     return (
-        <section className='banner'>
+        <section className='banner pt-90 pb-100 '>
             <div className="container ">
                 <div className="lg:max-w-[992px] lg:mt-[85px] 2xl:mt-[75px] mx-auto lg:px-[67px]">
                 <SubTitle subTitle="Secure your data" />
