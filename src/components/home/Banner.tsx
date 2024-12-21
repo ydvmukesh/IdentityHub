@@ -8,13 +8,14 @@ import BannerImg from '/public/images/productivity.png';
 const Banner = () => {
     return (
         <section className='banner'>
-            <div className="container max-w-[940px] mt-[75px]">
-                <SubTitle title="Secure your data" />
-                <div className="flex flex-col gap-3 md:gap-4 lg:gap-6">
+            <div className="container ">
+                <div className="lg:max-w-[940px] mt-[75px] mx-auto">
+                <SubTitle subTitle="Secure your data" />
+                <div className="flex flex-col gap-3 md:gap-5 lg:gap-7">
 
-                    <div className="sec-head  mx-auto">
-                        <h1 className='sec-title-gredient text-3xl md:text-4xl lg:text-6xl font-semibold'>
-                            Identity-hub is a better way <span>to achieve privacy</span>
+                    <div className="section-head  mx-auto">
+                        <h1 className='section-title  section-title-gredient text-2xl md:text-4xl lg:text-6xl font-semibold'>
+                            <span className='block'>Identity-hub is a better way </span> to achieve<span className='line-large'> privacy</span>
                         </h1>
                     </div>
 
@@ -26,16 +27,20 @@ const Banner = () => {
                         <Button className='btn-secondary' title='Use it Now' />
                     </div>
                 </div>
-                <div className="flex flex-col lg:flex-row  justify-center flex-wrap  mt-6 sm:mt-8 md:mt-12">
-                    <div className='flex lg:flex-col justify-between gap-3'>
+                <div className="flex flex-col lg:flex-row  justify-center flex-wrap  mt-6 sm:mt-8 md:mt-12 	 ">
+                    <div className='flex lg:flex-col justify-between gap-3 lg:max-w-52'>
                         <Card subTitle='One-time passcode' title='Kas3345-r32' />
                         <Card subTitle='Credit card' title='123 456 789 1243' />
                     </div>
+                    <div className="flex-1">
                     <Image src={BannerImg} alt='bannerimg' width={486} height={437} className='mx-auto' />
-                    <div className='flex lg:flex-col justify-between gap-3'>
+
+                    </div>
+                    <div className='flex lg:flex-col justify-between gap-3 lg:max-w-52'>
                         <Card subTitle='Phone numbers' href='tel:+1456453-3456' title='+1 (456) 453-3456' />
                         <Card subTitle='Email address' href='mailto:davidjx@gmail.com' title='davidjx@gmail.com' />
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -59,7 +64,7 @@ const Card: React.FC<CardProps> = ({ href, subTitle, title, }) => {
 
     return (
         <>
-            <div className="contact-card flex-shrink">
+            <div className="contact-card">
                 <div className="contact-card-icon"></div>
                 <div>
                     <p className='text-[10px] sm:text-sm'>{subTitle}</p>

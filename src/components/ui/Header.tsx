@@ -2,9 +2,14 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Logo from '/public/images/logo.svg'
-import Image from 'next/image'
-import Button from './Button'
+import Button from '../common/Button'
+import { navigationItems } from '@/utils/common'
+import Logo from './Logo'
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
+
+
+
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -14,8 +19,8 @@ const Header = () => {
                 <nav className="mx-auto flex max-w-7xl items-center justify-between px-3 py-3 rounded-xl " aria-label="Global">
                     <div className="flex lg:flex-1">
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <span className="sr-only">LOGO</span>
-                            <Image src={Logo} alt='logo' />
+                           
+                           <Logo/>
                         </Link>
                     </div>
                     <div className="flex lg:hidden">
@@ -25,7 +30,7 @@ const Header = () => {
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>
-                            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                            <RxHamburgerMenu  className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
@@ -43,7 +48,7 @@ const Header = () => {
                         <div className="flex items-center justify-between">
                             <Link href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">LOGO</span>
-                                <Image src={Logo} alt='logo' />
+                                <Logo/>
                             </Link>
                             <button
                                 type="button"
@@ -51,7 +56,7 @@ const Header = () => {
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <span className="sr-only">Close menu</span>
-                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                <IoMdClose  className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </div>
                         <div className="mt-6 flow-root">
@@ -85,13 +90,6 @@ interface NavigationProps {
     className?: string; // Optional className prop
 }
 const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
-    const navigationItems: NavigationItem[] = [
-        { href: '#', label: 'Home' },
-        { href: '#', label: 'Features' },
-        { href: '#', label: 'Pricing' },
-        { href: '#', label: 'Partners' },
-        { href: '#', label: 'About us' },
-    ];
 
     return (
         <>
